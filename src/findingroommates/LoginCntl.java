@@ -34,7 +34,7 @@ public class LoginCntl {
         boolean authenticated = false;
         
          if(getUserList().authenticate(theUsername, thePassword)){
-            System.out.println("Authenticated!");
+            System.out.println("Welcome!");
             theLoginUI.setVisible(false);
             
             UserAccount currentUser = getUserList().getCurrentUser(theUsername);
