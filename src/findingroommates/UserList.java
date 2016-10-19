@@ -13,11 +13,9 @@ import java.util.ArrayList;
 
 public class UserList {
     
-    
     private ArrayList<UserAccount> listOfUsers = null;
     
     public UserList(){  
-       // Create the users and add them to the arraylist
        listOfUsers = new ArrayList();
        for(int i = 0; i < 5; i++){
            String testUsername = "test";
@@ -25,7 +23,6 @@ public class UserList {
            Member newMember  = new Member (testUsername, testPassword);
            listOfUsers.add(newMember);
        }
-
     }
     
       public ArrayList<UserAccount> getListOfUsers(){
@@ -34,9 +31,9 @@ public class UserList {
       
       public UserAccount getCurrentUser(String userName) {
           UserAccount userAccountToPass = null;
-          for(UserAccount uA : listOfUsers) {
-              if(uA.getUsername().equals(userName)) {
-                  userAccountToPass = uA;
+          for(UserAccount account : listOfUsers) {
+              if(account.getUsername().equals(userName)) {
+                  userAccountToPass = account;
               }
           }
           return userAccountToPass;
@@ -51,7 +48,6 @@ public class UserList {
             }
         }
         return authenticated;
-        
     }
     
 }
