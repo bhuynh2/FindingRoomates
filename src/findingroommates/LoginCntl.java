@@ -15,8 +15,7 @@ public class LoginCntl {
     private UserList theUserList = null;
     
     public  LoginCntl(){
-
-        theLoginUI = new LoginUI();
+        theLoginUI = new LoginUI(this);
         theLoginUI.setLocationRelativeTo(null);
         theLoginUI.setVisible(true);
 }
@@ -24,7 +23,7 @@ public class LoginCntl {
     public UserList getUserList(){
     if(theUserList == null){
     
-    theUserList=new UserList();
+    theUserList = new UserList();
  
     }
     
@@ -34,9 +33,8 @@ public class LoginCntl {
     protected boolean requestAuthenticate(String theUsername, char[] thePassword){
         boolean authenticated = false;
         
-        
          if(getUserList().authenticate(theUsername, thePassword)){
-            System.out.println("Authenticated!" );
+            System.out.println("Authenticated!");
             theLoginUI.setVisible(false);
             
             UserAccount currentUser = getUserList().getCurrentUser(theUsername);

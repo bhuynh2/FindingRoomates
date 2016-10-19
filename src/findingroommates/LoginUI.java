@@ -17,13 +17,13 @@ public class LoginUI extends javax.swing.JFrame {
      */
     public LoginUI() {
         initComponents();
-        this.setTitle("Finding Roommates");
     }
 
     private LoginCntl parentLoginCntl = null;
         public LoginUI(LoginCntl theLoginCntl) {
         parentLoginCntl = theLoginCntl;
         initComponents();
+        this.setTitle("Finding Roommates");
     }
     
     /**
@@ -64,14 +64,16 @@ public class LoginUI extends javax.swing.JFrame {
 
         jLabel2.setText("Password:");
 
+        jLabel3.setBackground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("(っ◔◡◔)っ ♥ Finding Roommates ♥");
+        jLabel3.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
@@ -83,7 +85,7 @@ public class LoginUI extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(jPasswordField1))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)

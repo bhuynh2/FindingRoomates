@@ -14,7 +14,6 @@ public class ProfileCntl {
     private NavCntl parentNavCntl;
     private ProfileUI theProfileUI;
     
-
     public ProfileCntl(NavCntl theNavCntl, UserAccount userName) {
         parentNavCntl = theNavCntl;
         navToProfileUI(userName);
@@ -27,8 +26,7 @@ public class ProfileCntl {
     }
     
     public void navBackToMainMenu() {
-        theProfileUI.dispose();
+        theProfileUI.setVisible(false);
         parentNavCntl.showNavControl();  
-    }
-    
+    }  
 }

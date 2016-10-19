@@ -11,12 +11,10 @@ package findingroommates;
  */
 public abstract class UserAccount {
     
-    
     private String username = "";
     private char[] password = null;
      
-     public UserAccount(){
-        
+    public UserAccount(){   
     }
     
     public UserAccount(String newUsername, char[] newPassword){
@@ -33,6 +31,4 @@ public abstract class UserAccount {
     }
     
     public abstract boolean authenticate(String unToCheck, char[] pwTocheck);
-
-
 }

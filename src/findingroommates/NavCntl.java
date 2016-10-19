@@ -17,22 +17,20 @@ public class NavCntl {
     public NavCntl(UserAccount loggedInUser){
         currentUser = loggedInUser;
         createNavUI();
-    
     }
     
     public void createNavUI() {
         theNavUI = new NavUI(this, currentUser);
         theNavUI.setLocationRelativeTo(null);
         showNavControl();
-        
     }
     
     public void showNavControl() {
         theNavUI.setVisible(true);
     }
 
-    /*public void NavToProfile() {
+    public void NavToProfile() {
         ProfileCntl theProfileCntl = new ProfileCntl(this, currentUser);
         theNavUI.setVisible(false);
-    }*/
+    }
 }
