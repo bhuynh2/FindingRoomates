@@ -16,6 +16,8 @@ public class FindingRoommates {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        LoginCntl theLoginCntl = new LoginCntl();
     }
     
 }

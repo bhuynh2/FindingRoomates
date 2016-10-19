@@ -9,6 +9,49 @@ package findingroommates;
  *
  * @author bch5177
  */
+import java.util.ArrayList;
+
 public class UserList {
+    
+    
+    private ArrayList<UserAccount> listOfUsers = null;
+    
+    public UserList(){  
+       // Create the users and add them to the arraylist
+       listOfUsers = new ArrayList();
+       for(int i = 0; i < 5; i++){
+           String testUsername = "test";
+           char[] testPassword = {'t', 'e', 's', 't'};
+           Member newMember  = new Member (testUsername, testPassword);
+           listOfUsers.add(newMember);
+       }
+
+    }
+    
+      public ArrayList<UserAccount> getListOfUsers(){
+        return listOfUsers;
+    }
+      
+      public UserAccount getCurrentUser(String userName) {
+          UserAccount userAccountToPass = null;
+          for(UserAccount uA : listOfUsers) {
+              if(uA.getUsername().equals(userName)) {
+                  userAccountToPass = uA;
+              }
+          }
+          return userAccountToPass;
+      }
+    
+    public boolean authenticate(String username2check, char[] password2check){
+        boolean authenticated = false;
+        for(int i = 0; i < listOfUsers.size(); i++){
+            if(listOfUsers.get(i).authenticate(username2check, password2check)){
+                authenticated = true;
+                break;
+            }
+        }
+        return authenticated;
+        
+    }
     
 }
