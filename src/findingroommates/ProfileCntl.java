@@ -20,13 +20,10 @@ public class ProfileCntl {
         navToProfileUI(userName);
     }
     
-    
-
     public void navToProfileUI(UserAccount userName) {
         theProfileUI = new ProfileUI(this, userName);
         theProfileUI.setVisible(true);
         theProfileUI.setLocationRelativeTo(null);
-        
     }
     
     public void navBackToMainMenu() {
